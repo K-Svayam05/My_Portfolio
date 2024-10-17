@@ -1,120 +1,47 @@
-.sections {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url("../assets/sectionbg.jpg");
-    background-size: cover;
-    background-position: center;
-    // background-color: #f0f4f8; // Assuming a light background
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-
-    .sections_container {
-        display: flex;
-        background: linear-gradient(85deg, #000000, #aec0ff );
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 200px;
-        overflow: hidden;
-        width: 80%;
-        height: 60%;
-
-        .section_img {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // background-color: #000823;
-
-            img {
-                width: 80%;
-                height: auto;
-                border-radius: 50%; // Assuming a circular profile picture
-            }
-        }
-
-        .section_content {
-            flex: 2;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px;
-            // background-color: #aec0ff; // Assuming a background color similar to the screenshot
-
-            h1 {
-                margin: 0;
-                padding: 0;
-                font-size: 2em;
-                color: #333;
-            }
-
-            p {
-                margin: 10px 0;
-                font-size: 1.2em;
-                color: #333;
-
-                &.highlight {
-                    color: #333; // Normal text color
-                    font-weight: bold;
-                    transition: color 0.3s ease; // Smooth transition for hover effect
-
-                    &:hover {
-                        color: #ff4500; // Highlight color on hover
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // .sections {
 //     display: flex;
 //     justify-content: center;
 //     align-items: center;
 //     height: 100vh;
-//     background-color: #f0f4f8; // Assuming a light background
+//     background-image: url("../assets/sectionbg.jpg");
+//     background-size: cover;
+//     background-position: center;
+//     // background-color: #f0f4f8; // Assuming a light background
+//     padding: 0;
+//     margin: 0;
+//     width: 100vw;
 
 //     .sections_container {
 //         display: flex;
-//         background: #ffffff;
+//         background: linear-gradient(85deg, #000000, #aec0ff );
 //         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//         border-radius: 8px;
+//         border-radius: 200px;
 //         overflow: hidden;
+//         width: 80%;
+//         height: 60%;
 
 //         .section_img {
+//             flex: 1;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             // background-color: #000823;
+
 //             img {
-//                 width: 300px;
+//                 width: 80%;
 //                 height: auto;
 //                 border-radius: 50%; // Assuming a circular profile picture
-//                 margin: 20px;
 //             }
 //         }
 
 //         .section_content {
+//             flex: 2;
+//             align-items: center;
 //             display: flex;
 //             flex-direction: column;
 //             justify-content: center;
 //             padding: 20px;
-//             background-color: #e0e7ff; // Assuming a background color similar to the screenshot
+//             // background-color: #aec0ff; // Assuming a background color similar to the screenshot
 
 //             h1 {
 //                 margin: 0;
@@ -141,3 +68,154 @@
 //         }
 //     }
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // .sections {
+// //     display: flex;
+// //     justify-content: center;
+// //     align-items: center;
+// //     height: 100vh;
+// //     background-color: #f0f4f8; // Assuming a light background
+
+// //     .sections_container {
+// //         display: flex;
+// //         background: #ffffff;
+// //         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// //         border-radius: 8px;
+// //         overflow: hidden;
+
+// //         .section_img {
+// //             img {
+// //                 width: 300px;
+// //                 height: auto;
+// //                 border-radius: 50%; // Assuming a circular profile picture
+// //                 margin: 20px;
+// //             }
+// //         }
+
+// //         .section_content {
+// //             display: flex;
+// //             flex-direction: column;
+// //             justify-content: center;
+// //             padding: 20px;
+// //             background-color: #e0e7ff; // Assuming a background color similar to the screenshot
+
+// //             h1 {
+// //                 margin: 0;
+// //                 padding: 0;
+// //                 font-size: 2em;
+// //                 color: #333;
+// //             }
+
+// //             p {
+// //                 margin: 10px 0;
+// //                 font-size: 1.2em;
+// //                 color: #333;
+
+// //                 &.highlight {
+// //                     color: #333; // Normal text color
+// //                     font-weight: bold;
+// //                     transition: color 0.3s ease; // Smooth transition for hover effect
+
+// //                     &:hover {
+// //                         color: #ff4500; // Highlight color on hover
+// //                     }
+// //                 }
+// //             }
+// //         }
+// //     }
+// // }
+.section {
+    padding: 4rem 0;
+    background: url('../assets/sectionbg.jpg') no-repeat center center/cover;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .section_container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        z-index: 1;
+    }
+
+    .section_img {
+        width: 40%;
+
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+            border: 5px solid #3498db;
+        }
+    }
+
+    .section_content {
+        width: 55%;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li.highlight {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+                padding-left: 1.5rem;
+                position: relative;
+                color: #f4f4f4;
+
+                &:before {
+                    content: "•";
+                    color: #3498db;
+                    font-size: 1.5rem;
+                    position: absolute;
+                    left: 0;
+                    top: -0.2rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section_container {
+            flex-direction: column;
+        }
+
+        .section_img, .section_content {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+}

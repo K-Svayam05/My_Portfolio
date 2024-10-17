@@ -1,51 +1,37 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import './styles/Header.scss';
-
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const[active,setActive] = useState(false);
-  const showMenu = ()=> {
-    setActive(!active)
+  const [active, setActive] = useState(false);
+  const showMenu = () => {
+    setActive(!active);
   };
   
   return (
-    <div className="header">
+    <header className="header">
       <div className="header_logo">
         <h1>Svayam's Portfolio</h1>
       </div>
 
-      <nav> 
+      <nav className={active ? "nav_active" : ""}> 
         <ul>
-          <div className="closed">
-            <CloseIcon className="close-icon" onclick={showMenu}  />
-          </div>
-          <li>
-            <Link to="/"><b>Home</b></Link>
+          <li className="close_icon">
+            <CloseIcon onClick={showMenu} />
           </li>
-          <li>
-            <Link to="/"><b>About</b></Link>
-          </li>
-          <li>
-            <Link to="/"><b>Portfolio</b></Link>
-          </li>
-          <li>
-            <Link to="/"><b>Blog</b></Link>
-          </li>
-          <li>
-            <Link to="/"><b>Contact</b></Link>
-          </li>
-          
+          {["Home", "About", "Portfolio", "Blog", "Contact"].map((item) => (
+            <li key={item}>
+              <Link to="/"><b>{item}</b></Link>
+            </li>
+          ))}
         </ul>
       </nav>
-      <div className="changer">
-        <MenuIcon className="menu" onclick={showMenu}/>
-
-
+      <div className="menu_icon">
+        <MenuIcon onClick={showMenu} />
       </div>
-    </div>
+    </header>
   );
 };
 

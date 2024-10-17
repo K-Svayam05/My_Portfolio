@@ -2,25 +2,32 @@ import React from "react";
 import './styles/Section.scss';
 import me from './assets/me1.png';
 
-const Section = ( ) =>{
-    return(
-        <div className="sections">
-            <div className="sections_container">
+const Section = () => {
+    const skills = [
+        "Experience in Frontend and Backend Development",
+        "Machine Learning Developer",
+        "Python Development",
+        "Artificial Intelligence",
+        "Software Engineering"
+    ];
+
+    return (
+        <section className="section">
+            <div className="section_container">
                 <div className="section_img">
-                    <img src={me} alt=" "/>
+                    <img src={me} alt="Svayam Kapadia" />
                 </div>
                 <div className="section_content">
-                    <h1>Svayam Kapadia</h1>
-                    <p className="highlight">Experience in Frontend and Backend Development</p>
-                    <p className="highlight">Machine Learning Developer</p>
-                    <p className="highlight">Python Development</p>
-                    <p className="highlight">Artificial Intelligence</p>
-                    <p className="highlight">Software Engineering</p>
+                    <h2>Svayam Kapadia</h2>
+                    <ul>
+                        {skills.map((skill, index) => (
+                            <li key={index} className="highlight">{skill}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>
+        </section>
+    );
+};
 
-        </div>
-    )
-
-}
-export default Section
+export default Section;

@@ -1,46 +1,38 @@
 import React from 'react';
-import { Instagram, X, LinkedIn, GitHub } from "@mui/icons-material";
-// import XIcon from '@mui/icons-material/X';
+import { Instagram, Twitter, LinkedIn, GitHub } from "@mui/icons-material";
 import './styles/Main.scss'
 import me1 from './assets/me1.png';
 
 const Main = () => {
     return (
-        <div className='main'>
+        <main className='main'>
             <div className='main_container'>
                 <div className='main_content'>
                     <div className='text'>
-                        <p>
-                            Hello Everyone !
-                        </p>
-                        <h1>
-                            I am Svayam
-                        </h1>
-                        <p>Front-End Developer and AI-ML Developer</p>
+                        <p className="greeting">Hello Everyone!</p>
+                        <h1>I am Svayam</h1>
+                        <p className="job-title">Front-End Developer and AI-ML Developer</p>
 
                         <div className='icons'>
-                            <X className='icon' />
+                            <Twitter className='icon' />
                             <Instagram className='icon' />
                             <LinkedIn className='icon' />
                             <GitHub className='icon' />
                         </div>
 
                         <div className='buttons'>
-                            <button>Contact Me!</button>
-                            <button>Hire Me!</button>
+                            <button className="contact-btn">Contact Me!</button>
+                            <button className="hire-btn">Hire Me!</button>
                         </div>
-
                     </div>
                 </div>
 
                 <div className='main_img'>
-                    <img src={me1} alt=' '/>
+                    <img src={me1} alt='Svayam Kapadia' />
                 </div>
-
             </div>
-
-        </div>
+        </main>
     )
 }
 
-export default Main
+export default Main;
